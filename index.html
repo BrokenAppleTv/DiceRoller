@@ -30,7 +30,7 @@
 <h1 class="main">Random Dice Roller</h1>
         <div class="align-center">
             <p>select a dice amount you would like to roll then click "roll". </p>
-                <p>Roll
+                <p>Roll the amount of sides</p>
                 <select name="dice" id="dice" py-change="select_face_option">
                     <option value="2">2 Sides</option>
                     <option value="4">4 Sides</option>
@@ -39,15 +39,11 @@
                     <option value="10">10 Sides</option>
                     <option value="20">20 Sides</option>
                     <option value="100">100 Sides</option>
-                    the amount of sides
                 </select>
-                <select name="amount" id="amount" py-change="select_face_option">
-                    <option value="1">1 Dice</option>
-                    <option value="2">2 Dice</option>
+            <label for="number">number of dice</label>
+                <input type="number" id="number" name="number"/>
 
-                </select>
 
-                </p>
 
             <div class="button1display">
                     <button class="button1font" type="button" py-click="roll_all_dice">
@@ -57,7 +53,8 @@
                 <button class="button2font" type=button py-click="clear_history">clear roll history</button>
             </div>
             <div class="history" id="roll-history"></div>
-        </div>
+            </div>
+
         <!-- End of your code -->
         <script type="py" src="main.py" config="./pyscript.json"></script>
     </body>

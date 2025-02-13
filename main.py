@@ -22,7 +22,9 @@ def roll_all_dice(event):
     ...  # replace with your own code
 
     document.querySelector("div#roll-history").innerHTML += "<p id='something'> Rolling dice...</p>"
-    for x in range(1, dice_type + 1):
+    roll_count = document.querySelector("#number").value
+    roll_count = int(roll_count)
+    for x in range(roll_count):
         result = dice.roll_dice(dice_type)
         document.querySelector("div#roll-history").innerHTML += "<p id='something'> you rolled:" + str(result) + "</p>"
 
